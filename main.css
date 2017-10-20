@@ -40,6 +40,9 @@ html, body {
 }
 
 /* Menu */
+#menu {
+    display: block !important;
+}
 .layers {
     margin: 3em 0 0 0;
     padding: 0;
