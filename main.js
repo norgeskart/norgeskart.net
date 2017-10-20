@@ -46,7 +46,14 @@ var map = L.map('map', {
     zoomControl: false,
     layers: [currentLayer],
 });
+
 map.attributionControl.setPrefix(false);
+
+if (!map.restoreView()) {
+    map.setView([50.5, 30.51], 15);
+}
+
+var hash = new L.Hash(map, layers);
 
 L.control.zoom({
     position: 'topright',
