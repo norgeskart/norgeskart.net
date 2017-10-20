@@ -44,7 +44,7 @@ html, body {
     display: block !important;
 }
 .layers {
-    margin: 3em 0 0 0;
+    margin: 3em 0 3em 0;
     padding: 0;
 }
 .layers li {
@@ -58,13 +58,32 @@ html, body {
     border-top: 1px solid #e60000;
 }
 
+.appleStore {
+    display: block;
+    margin: 0 auto;
+    width: 135px;
+    height: 40px;
+    background-size:contain;
+    overflow:hidden;
+    background:url(https://linkmaker.itunes.apple.com/assets/shared/badges/en-us/appstore-lrg.svg) no-repeat;
+}
+.googlePlay {
+    display: block;
+    margin: 0 auto;
+    width:155px;
+    background-size:contain;
+}
+.googlePlay img {
+    width: 155px;
+}
+
 /* Slideout */
 body {
     width: 100%;
     height: 100%;
   }
-  
-  .slideout-menu {
+
+.slideout-menu {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -74,33 +93,33 @@ body {
     -webkit-overflow-scrolling: touch;
     z-index: 0;
     display: none;
-  }
-  
-  .slideout-menu-left {
+}
+
+.slideout-menu-left {
     left: 0;
-  }
-  
-  .slideout-menu-right {
+}
+
+.slideout-menu-right {
     right: 0;
-  }
-  
-  .slideout-panel {
+}
+
+.slideout-panel {
     position: relative;
     z-index: 1;
     will-change: transform;
     background-color: #FFF; /* A background-color is required */
     min-height: 100vh;
-  }
-  
-  .slideout-open,
-  .slideout-open body,
-  .slideout-open .slideout-panel {
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
     overflow: hidden;
-  }
-  
-  .slideout-open .slideout-menu {
+}
+
+.slideout-open .slideout-menu {
     display: block;
-  }
+}
 
 .slideout-panel:before {
     content: '';
