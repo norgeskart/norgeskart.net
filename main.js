@@ -1,3 +1,14 @@
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceWorker.js', { scope: './' })
+        .then(function () {
+            if (navigator.serviceWorker.controller) {
+                console.log('The service worker is currently handling network operations.');
+            } else {
+                console.log('Failed to register.');
+            }
+        });
+}
+
 var layers = {
     land: L.tileLayer('https://opencache{s}.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom={z}&x={x}&y={y}', {
         // bounds: [

@@ -1,10 +1,10 @@
 {
-    "name": "Norgeskart - the best map of Norway",
+    "name": "Norgeskart is the most detailed map of Norway",
     "short_name": "Norgeskart",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#e60000",
-    "description": "A simply readable Hacker News app.",
+    "description": "Norgeskart is the most detailed map of Norway",
     "icons": [
         {
             "src": "images/icons/icon-72x72.png",
