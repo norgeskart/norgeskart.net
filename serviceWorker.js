@@ -4,7 +4,7 @@
 var config = {
   version: 'achilles',
   staticCacheItems: [
-    'leaflet.easyPrint.js',
+    'leaflet-easyPrint.js',
     'leaflet-fullHash.js',
     'leaflet.browser.print.min.js',
     'leaflet.restoreview.js',
