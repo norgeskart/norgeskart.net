@@ -21,13 +21,18 @@ html, body {
 .leaflet-container .leaflet-bar .leaflet-control-zoom-out {
     background-color: #e60000;
     color: white;
-    font-size: 35px;
+    font-size: 22px;
     width: 40px;
     height: 40px;
-    line-height: 35px;
+    text-align: center;
+    line-height: 40px;
 }
 
-.leaflet-control-container .leaflet-bar.leaflet-control-zoom {
+.leaflet-control-browser-print {
+    display: none;
+}
+
+.leaflet-control-container .leaflet-bar {
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 0;
 }
@@ -43,19 +48,40 @@ html, body {
 #menu {
     display: block !important;
 }
+.menuHeadline {
+    background-color: #e60000;
+    color: white;
+    margin: 0;
+    padding: 0.5em;
+    text-align: center;
+}
 .layers {
-    margin: 3em 0 3em 0;
+    margin: 0em 0 3em 0;
     padding: 0;
 }
 .layers li {
     padding: 1em;
-    font-size: 1.5em;
     border-bottom: 1px solid #e60000;
     display: block;
     color: #e60000;
+    cursor: pointer;
+}
+.layers li:hover {
+    background-color:rgba(230, 0, 0, 0.1);
 }
 .layers li:first-child {
     border-top: 1px solid #e60000;
+}
+
+.layers li span {
+    font-size: 0.7em;
+    opacity: 0.5;
+    display: block;
+    float: right;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
 }
 
 .appleStore {

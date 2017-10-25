@@ -34,10 +34,15 @@ var layers = {
     })
 }
 
-var currentLayer = layers.land;
-var map = L.map('map', {
+var defaultSettings = {
     center: [60.6, 7.5],
     zoom: 8,
+};
+
+var currentLayer = layers.land;
+var map = L.map('map', {
+    center: defaultSettings.center,
+    zoom: defaultSettings.zoom,
     maxBounds: [
         [73.3, -10.5],
         [54, 46]
@@ -50,13 +55,37 @@ var map = L.map('map', {
 map.attributionControl.setPrefix(false);
 
 if (!map.restoreView()) {
-    map.setView([50.5, 30.51], 15);
+    map.setView(defaultSettings.center, defaultSettings.zoom);
 }
 
 var hash = new L.Hash(map, layers);
 
 L.control.zoom({
     position: 'topright',
+}).addTo(map);
+
+var browserPrint = L.browserPrint({
+    position: 'topright',
+    hidden: true,
+    printModes: ['Portrait', 'Landscape', 'Auto', 'Custom'],
+    printModesNames: {
+        Portrait: 'Portrait',
+        Landscape: 'Landscape',
+        Auto: 'Auto',
+        Custom: 'Custom',
+    },
+}).addTo(map);
+
+var printPlugin = L.easyPrint({
+    hidden: true,
+    sizeModes: ['Current', 'A4Portrait', 'A4Landscape'],
+    defaultSize: {
+        Current: 'Current Size',
+        A4Landscape: 'A4 Landscape',
+        A4Portrait: 'A4 Portrait'
+    },
+    position: 'topright',
+    exportOnly: true,
 }).addTo(map);
 
 L.control.scale({
@@ -100,3 +129,9 @@ document.querySelector('.toggle-button').addEventListener('click', function () {
 document.querySelector('.land').addEventListener('click', function () { switchLayer('land') });
 document.querySelector('.simple').addEventListener('click', function () { switchLayer('simple') });
 document.querySelector('.sea').addEventListener('click', function () { switchLayer('sea') });
+
+document.getElementById('saveLandscape').addEventListener('click', function () { slideout.close(); printPlugin.printMap('A4Landscape page', 'norgeskart'); });
+document.getElementById('savePortrait').addEventListener('click', function () { slideout.close(); printPlugin.printMap('A4Portrait page', 'norgeskart'); });
+
+document.getElementById('printLandscape').addEventListener('click', function () { slideout.close(); browserPrint._printLandscape() });
+document.getElementById('printPortrait').addEventListener('click', function () { slideout.close(); browserPrint._printPortrait() });

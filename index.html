@@ -20,10 +20,24 @@
 
 <body>
     <nav id="menu" style="display: none;">
+        <h1 class="menuHeadline">Norgeskart</h1>
         <ul class="layers">
             <li class="land">Land</li>
             <li class="simple">Enkelt</li>
             <li class="sea">Sjø</li>
+        </ul>
+
+        <ul class="layers">
+            <li>
+                Skriv ut
+                <span id="printLandscape">Landskap</span>
+                <span id="printPortrait">Portrett</span>
+            </li>
+            <li>
+                Lage som bilde
+                <span id="saveLandscape">Landskap</span>
+                <span id="savePortrait">Portrett</span>
+            </li>
         </ul>
         <a class="appleStore" href="https://itunes.apple.com/us/app/norgeskart/id727189627?mt=8"></a>
         <a class="googlePlay" href='https://play.google.com/store/apps/details?id=sk.sasak.norgeskart&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
@@ -42,6 +56,8 @@
     <link rel=stylesheet href="main.css">
     <script src="leaflet-fullHash.js"></script>
     <script src="leaflet.restoreview.js"></script>
+    <script src="leaflet.browser.print.min.js"></script>
+    <script src="leaflet-easyPrint.js"></script>
     <script src="main.js"></script>
 </body>
 
