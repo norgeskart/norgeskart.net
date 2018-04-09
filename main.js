@@ -32,7 +32,7 @@ new SmartBanner({
 });
 
 var layers = {
-    land: L.tileLayer('https://opencache{s}.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=topo2&zoom={z}&x={x}&y={y}', {
+    land: L.tileLayer('https://opencache{s}.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norgeskart_bakgrunn&zoom={z}&x={x}&y={y}', {
         // bounds: [
         //     [5.322054, 60.391263]
         //     [6.465313, 60.658534]
