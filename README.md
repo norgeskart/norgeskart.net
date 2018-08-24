@@ -1,4 +1,4 @@
-# norgeskart.org
+# norgeskart.net
 
 ## Development
 
