@@ -38,8 +38,8 @@ var layers = {
         //     [6.465313, 60.658534]
         // ],
         tileSize: 256,
-        minzoom: 1,
-        maxzoom: 20,
+        minZoom: 1,
+        maxZoom: 20,
         attribution: '©Kartverket',
         subdomains: ['', '2', '3'],
     }),
@@ -49,8 +49,8 @@ var layers = {
         //     [6.465313, 60.658534]
         // ],
         tileSize: 256,
-        minzoom: 1,
-        maxzoom: 20,
+        minZoom: 1,
+        maxZoom: 20,
         attribution: '©Kartverket',
         subdomains: ['', '2', '3'],
     }),
@@ -60,8 +60,8 @@ var layers = {
         //     [6.465313, 60.658534]
         // ],
         tileSize: 256,
-        minzoom: 1,
-        maxzoom: 20,
+        minZoom: 1,
+        maxZoom: 20,
         attribution: '©Kartverket',
         subdomains: ['', '2', '3'],
     })
@@ -83,7 +83,6 @@ var map = L.map('map', {
     attributionControl: true,
     zoomControl: false,
     layers: [currentLayer],
-    maxZoom: 20,
 });
 
 map.attributionControl.setPrefix(false);
