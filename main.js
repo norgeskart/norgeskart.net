@@ -83,6 +83,7 @@ var map = L.map('map', {
     attributionControl: true,
     zoomControl: false,
     layers: [currentLayer],
+    maxZoom: 20,
 });
 
 map.attributionControl.setPrefix(false);
