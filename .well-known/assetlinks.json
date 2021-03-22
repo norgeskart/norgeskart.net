@@ -1,9 +1,0 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "sk.sasak.norgeskart",
-    "sha256_cert_fingerprints":
-    ["49:09:85:23:EF:76:1D:16:DF:4D:C9:E1:8C:8C:A2:44:BB:2B:1F:CE:B3:80:8C:29:B5:96:BA:67:38:40:9B:1D"]
-  }
-}]
